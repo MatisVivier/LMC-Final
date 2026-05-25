@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap');
 
 :root {
-    /* Thème Lumineux - Fond Beige, Éléments Bleu Canard & Or */
+    /* Thème Lumineux - Fond Beige, Éléments Bleu Pétrole & Doré Orangé */
     --color-emerald: #F9F6F0; /* Beige ivoire très clair (fond) */
-    --color-sand: #083D3F; /* Bleu canard foncé pour le texte principal */
-    --color-gold: #DCAE51; /* Or lumineux (accent) */
+    --color-sand: #082C34; /* Bleu pétrole très sombre (texte principal) */
+    --color-gold: #D4833B; /* Doré orangé / Ambre chaleureux (accent) */
     --color-white: #FFFFFF;
     
     /* Typographie */
@@ -13,7 +13,7 @@
     
     /* Effets Verre */
     --glass-bg: rgba(255, 255, 255, 0.75);
-    --glass-border: rgba(6, 148, 148, 0.25);
+    --glass-border: rgba(11, 59, 70, 0.25);
     
     --transition-slow: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -43,7 +43,7 @@ body {
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(6, 148, 148, 0.25);
+    border: 1px solid rgba(11, 59, 70, 0.25);
     border-radius: 100px;
     display: flex;
     justify-content: space-between;
@@ -159,7 +159,7 @@ body {
     line-height: 1;
     font-weight: 400;
     margin-bottom: 2rem;
-    color: #069494; /* Bleu canard vibrant */
+    color: #0B3B46; /* Bleu pétrole profond */
 }
 
 .italic-serif {
@@ -223,7 +223,7 @@ body {
     font-family: var(--font-serif);
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #069494; /* Bleu canard vibrant */
+    color: #0B3B46; /* Bleu pétrole profond */
 }
 
 .section-header p {
@@ -259,8 +259,8 @@ body {
 
 .light-card {
     background: linear-gradient(145deg, #FCFAF5 0%, #EFEBE0 100%);
-    color: var(--color-sand); /* Bleu canard foncé */
-    border: 1px solid rgba(6, 148, 148, 0.25);
+    color: var(--color-sand); /* Bleu pétrole très sombre */
+    border: 1px solid rgba(11, 59, 70, 0.25);
 }
 
 .image-card {
@@ -294,7 +294,7 @@ body {
 }
 
 .light-card h3 {
-    color: #069494; /* Bleu canard vibrant sur la carte claire */
+    color: #0B3B46; /* Bleu pétrole profond sur la carte claire */
 }
 
 .text-card p {
