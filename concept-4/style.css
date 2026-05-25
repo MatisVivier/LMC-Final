@@ -54,10 +54,10 @@ body {
 .nav-side a {
     text-decoration: none;
     color: var(--color-espresso);
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.95rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     transition: var(--transition);
 }
 
@@ -67,8 +67,8 @@ body {
 
 .nav-logo {
     font-family: var(--font-serif);
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2.2rem;
+    font-weight: 700;
     text-align: center;
     flex: 1;
     letter-spacing: -0.5px;
@@ -79,14 +79,15 @@ body {
 }
 
 .btn-reservation {
-    border: 1px solid rgba(3, 43, 51, 0.35);
+    border: 2px solid var(--color-espresso);
     padding: 0.8rem 1.5rem;
     border-radius: 50px;
+    font-weight: 600;
 }
 
 .btn-reservation:hover {
-    background-color: var(--color-spice);
-    color: var(--color-espresso) !important;
+    background-color: var(--color-espresso);
+    color: var(--color-cream) !important;
 }
 
 .mobile-burger {
@@ -149,7 +150,7 @@ body {
 .hero-content p {
     font-size: 1.15rem;
     line-height: 1.7;
-    color: rgba(3, 43, 51, 0.8);
+    color: rgba(3, 43, 51, 0.92);
     margin-bottom: 3rem;
     max-width: 500px;
 }
@@ -161,21 +162,21 @@ body {
 }
 
 .btn-primary-gastro {
-    background-color: var(--color-spice);
-    color: var(--color-espresso);
+    background-color: var(--color-espresso);
+    color: var(--color-cream);
     text-decoration: none;
     padding: 1.2rem 2.5rem;
     border-radius: 50px;
-    font-weight: 500;
+    font-weight: 600;
     transition: var(--transition);
-    box-shadow: 0 10px 25px rgba(197, 155, 39, 0.28);
+    box-shadow: 0 10px 25px rgba(3, 43, 51, 0.25);
 }
 
 .btn-primary-gastro:hover {
-    background-color: var(--color-espresso);
-    color: var(--color-cream);
+    background-color: var(--color-spice);
+    color: var(--color-espresso);
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(3, 43, 51, 0.28);
+    box-shadow: 0 15px 30px rgba(197, 155, 39, 0.35);
 }
 
 /* Signature du chef */
@@ -240,17 +241,18 @@ body {
     left: -40px;
     width: 140px;
     height: 140px;
-    background-color: rgba(245, 242, 235, 0.96);
+    background-color: var(--color-espresso);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     animation: rotateStamp 20s linear infinite;
     z-index: 10;
+    box-shadow: 0 10px 30px rgba(3, 43, 51, 0.25);
 }
 
 .floating-stamp svg {
-    fill: var(--color-spice);
+    fill: var(--color-cream);
 }
 
 @keyframes rotateStamp {
@@ -261,7 +263,7 @@ body {
 /* --- SECTION TERROIR --- */
 .terroir-section {
     padding: 8rem 5%;
-    background: linear-gradient(180deg, #F5F2EB 0%, #ffffff 100%);
+    background: linear-gradient(180deg, #eae5d9 0%, #ffffff 100%);
 }
 
 .terroir-container {
