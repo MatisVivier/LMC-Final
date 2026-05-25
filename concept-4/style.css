@@ -264,7 +264,7 @@ body {
 /* --- SECTION TERROIR --- */
 .terroir-section {
     padding: 8rem 5%;
-    background: linear-gradient(180deg, var(--color-cream) 0%, #FFFFFF 100%);
+    background: transparent;
 }
 
 .terroir-container {
@@ -352,7 +352,7 @@ body {
 }
 
 .hero-sensory {
-    background: linear-gradient(180deg, rgba(6, 148, 148, 0.04) 0%, rgba(220, 174, 81, 0.06) 100%);
+    background: transparent;
 }
 
 /* --- RESPONSIVE --- */
