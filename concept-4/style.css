@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap');
 
 :root {
-    /* Palette Bleu Canard & Beige */
-    --color-cream: #F4EFEB; /* Beige clair doux pour l'arrière-plan */
-    --color-espresso: #0A3C46; /* Bleu canard profond */
-    --color-spice: #C89665; /* Beige chaud cuivré / Camel (accent) */
-    --color-leaf: #185E6E; /* Bleu canard secondaire */
+    /* Palette Bleu Canard, Beige & Or Lumineux */
+    --color-cream: #F5F2EB; /* Beige clair raffiné */
+    --color-espresso: #032B33; /* Bleu canard profond et luxueux */
+    --color-spice: #C59B27; /* Or lumineux et chaud */
+    --color-leaf: #116A7B; /* Bleu canard secondaire saturé */
     
     /* Typographie */
     --font-serif: 'Lora', serif; /* Élégance, classicisme */
@@ -79,7 +79,7 @@ body {
 }
 
 .btn-reservation {
-    border: 1px solid rgba(10, 60, 70, 0.28);
+    border: 1px solid rgba(3, 43, 51, 0.35);
     padding: 0.8rem 1.5rem;
     border-radius: 50px;
 }
@@ -149,7 +149,7 @@ body {
 .hero-content p {
     font-size: 1.15rem;
     line-height: 1.7;
-    color: rgba(10, 60, 70, 0.78);
+    color: rgba(3, 43, 51, 0.8);
     margin-bottom: 3rem;
     max-width: 500px;
 }
@@ -168,14 +168,14 @@ body {
     border-radius: 50px;
     font-weight: 500;
     transition: var(--transition);
-    box-shadow: 0 10px 25px rgba(200, 150, 101, 0.24);
+    box-shadow: 0 10px 25px rgba(197, 155, 39, 0.28);
 }
 
 .btn-primary-gastro:hover {
     background-color: var(--color-espresso);
     color: var(--color-cream);
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(10, 60, 70, 0.24);
+    box-shadow: 0 15px 30px rgba(3, 43, 51, 0.28);
 }
 
 /* Signature du chef */
@@ -205,7 +205,7 @@ body {
 
 .signature-text .role {
     font-size: 0.8rem;
-    color: rgba(10, 60, 70, 0.62);
+    color: rgba(3, 43, 51, 0.65);
 }
 
 /* Image principale avec effet de chevauchement */
@@ -218,7 +218,7 @@ body {
     border-radius: 20px 200px 20px 20px; /* Forme asymétrique élégante */
     overflow: hidden;
     height: 75vh;
-    box-shadow: 20px 20px 60px rgba(10, 60, 70, 0.16);
+    box-shadow: 20px 20px 60px rgba(3, 43, 51, 0.2);
     transform: translateX(-5%); /* Fait mordre l'image sur le texte */
 }
 
@@ -240,7 +240,7 @@ body {
     left: -40px;
     width: 140px;
     height: 140px;
-    background-color: rgba(244, 239, 235, 0.96);
+    background-color: rgba(245, 242, 235, 0.96);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -261,7 +261,7 @@ body {
 /* --- SECTION TERROIR --- */
 .terroir-section {
     padding: 8rem 5%;
-    background: linear-gradient(180deg, #f4efeb 0%, #ffffff 100%);
+    background: linear-gradient(180deg, #F5F2EB 0%, #ffffff 100%);
 }
 
 .terroir-container {
@@ -296,7 +296,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    box-shadow: -10px 10px 30px rgba(10, 60, 70, 0.12);
+    box-shadow: -10px 10px 30px rgba(3, 43, 51, 0.16);
     z-index: 2;
 }
 
@@ -315,7 +315,7 @@ body {
 .terroir-text p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: rgba(10, 60, 70, 0.74);
+    color: rgba(3, 43, 51, 0.78);
     margin-bottom: 2.5rem;
 }
 
@@ -350,7 +350,7 @@ body {
 }
 
 .hero-sensory {
-    background: linear-gradient(180deg, rgba(10, 60, 70, 0.02) 0%, rgba(200, 150, 101, 0.03) 100%);
+    background: linear-gradient(180deg, rgba(3, 43, 51, 0.03) 0%, rgba(197, 155, 39, 0.05) 100%);
 }
 
 /* --- RESPONSIVE --- */
