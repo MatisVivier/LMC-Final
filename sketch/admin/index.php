@@ -17,15 +17,15 @@ $sec = $config['sections'] ?? [];
 <body>
 
     <aside class="sidebar">
-        <div class="logo">Solstice<span>Engine</span></div>
+        <div class="logo">LMC<span>Admin</span></div>
         <nav>
-            <a href="#tab-global" class="active">⚙️ Configuration Globale</a>
-            <a href="#tab-hero">🌅 Section En-tête (Hero)</a>
-            <a href="#tab-manifesto">📖 Section Le Manifeste</a>
-            <a href="#tab-services">🛎️ Section Prestations</a>
-            <a href="#tab-creations">🧑‍🍳 Section Créations</a>
-            <a href="#tab-reviews">💬 Section Témoignages</a>
-            <a href="#tab-devis">✉️ Section Formulaire Devis</a>
+            <a href="#tab-global" class="active">Configuration Globale</a>
+            <a href="#tab-hero">Section En-tête (Hero)</a>
+            <a href="#tab-manifesto">Section Le Manifeste</a>
+            <a href="#tab-services">Section Prestations</a>
+            <a href="#tab-creations">Section Créations</a>
+            <a href="#tab-reviews">Section Témoignages</a>
+            <a href="#tab-devis">Section Formulaire Devis</a>
         </nav>
     </aside>
 
@@ -33,8 +33,8 @@ $sec = $config['sections'] ?? [];
         <header class="topbar">
             <h1>Panneau d'Administration Intégral</h1>
             <div class="actions">
-                <button id="btn-undo" class="btn-secondary" disabled>↩️ Annuler l'action</button>
-                <button id="btn-save" class="btn-primary">💾 Sauvegarder l'état</button>
+                <button id="btn-undo" class="btn-secondary" disabled>Annuler l'action</button>
+                <button id="btn-save" class="btn-primary">Sauvegarder l'état</button>
             </div>
         </header>
 

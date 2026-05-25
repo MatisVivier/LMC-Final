@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap');
+
+:root {
+    /* Palette Bleu Canard & Beige */
+    --color-cream: #F4EFEB; /* Beige clair doux pour l'arrière-plan */
+    --color-espresso: #0A3C46; /* Bleu canard profond */
+    --color-spice: #C89665; /* Beige chaud cuivré / Camel (accent) */
+    --color-leaf: #185E6E; /* Bleu canard secondaire */
+    
+    /* Typographie */
+    --font-serif: 'Lora', serif; /* Élégance, classicisme */
+    --font-sans: 'Plus Jakarta Sans', sans-serif; /* Modernité, lisibilité */
+    
+    --transition: 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-cream);
+    color: var(--color-espresso);
+    overflow-x: hidden;
+}
+
+/* --- NAVIGATION SPLIT --- */
+.gastro-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-side {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    flex: 1;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
+.nav-side a {
+    text-decoration: none;
+    color: var(--color-espresso);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.nav-side a:hover {
+    color: var(--color-spice);
+}
+
+.nav-logo {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    flex: 1;
+    letter-spacing: -0.5px;
+}
+
+.nav-logo span {
+    color: var(--color-spice);
+}
+
+.btn-reservation {
+    border: 1px solid rgba(10, 60, 70, 0.28);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+}
+
+.btn-reservation:hover {
+    background-color: var(--color-spice);
+    color: var(--color-espresso) !important;
+}
+
+.mobile-burger {
+    display: none;
+    background: none;
+    border: none;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* --- HERO SENSORIEL --- */
+.hero-sensory {
+    padding: 120px 5% 5rem 5%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    padding-right: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+.badge-gastro {
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-spice);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.hero-content h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    line-height: 1.05;
+    margin-bottom: 2rem;
+    color: var(--color-espresso);
+}
+
+.italic-accent {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--color-leaf);
+}
+
+.hero-content p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: rgba(10, 60, 70, 0.78);
+    margin-bottom: 3rem;
+    max-width: 500px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.btn-primary-gastro {
+    background-color: var(--color-spice);
+    color: var(--color-espresso);
+    text-decoration: none;
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: var(--transition);
+    box-shadow: 0 10px 25px rgba(200, 150, 101, 0.24);
+}
+
+.btn-primary-gastro:hover {
+    background-color: var(--color-espresso);
+    color: var(--color-cream);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(10, 60, 70, 0.24);
+}
+
+/* Signature du chef */
+.signature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.chef-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.signature-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.signature-text .name {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.signature-text .role {
+    font-size: 0.8rem;
+    color: rgba(10, 60, 70, 0.62);
+}
+
+/* Image principale avec effet de chevauchement */
+.hero-visual {
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 20px 200px 20px 20px; /* Forme asymétrique élégante */
+    overflow: hidden;
+    height: 75vh;
+    box-shadow: 20px 20px 60px rgba(10, 60, 70, 0.16);
+    transform: translateX(-5%); /* Fait mordre l'image sur le texte */
+}
+
+.main-dish {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+
+.image-wrapper:hover .main-dish {
+    transform: scale(1.05);
+}
+
+/* Macaron Tournant (Détail Wow) */
+.floating-stamp {
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    width: 140px;
+    height: 140px;
+    background-color: rgba(244, 239, 235, 0.96);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotateStamp 20s linear infinite;
+    z-index: 10;
+}
+
+.floating-stamp svg {
+    fill: var(--color-spice);
+}
+
+@keyframes rotateStamp {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* --- SECTION TERROIR --- */
+.terroir-section {
+    padding: 8rem 5%;
+    background: linear-gradient(180deg, #f4efeb 0%, #ffffff 100%);
+}
+
+.terroir-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.terroir-images {
+    position: relative;
+    height: 600px;
+}
+
+.img-large {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.img-small {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: -10px 10px 30px rgba(10, 60, 70, 0.12);
+    z-index: 2;
+}
+
+.terroir-text h2 {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.highlight-spice {
+    color: var(--color-spice);
+    font-style: italic;
+}
+
+.terroir-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(10, 60, 70, 0.74);
+    margin-bottom: 2.5rem;
+}
+
+.link-discover {
+    font-family: var(--font-serif);
+    color: var(--color-espresso);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--color-spice);
+    padding-bottom: 5px;
+    transition: var(--transition);
+}
+
+.link-discover:hover {
+    color: var(--color-spice);
+}
+
+.badge-gastro,
+.highlight-spice,
+.nav-logo span,
+.section-header p {
+    color: var(--color-spice);
+}
+
+.hero-content h1,
+.terroir-text h2,
+.nav-side a,
+.nav-logo,
+.link-discover {
+    color: var(--color-espresso);
+}
+
+.hero-sensory {
+    background: linear-gradient(180deg, rgba(10, 60, 70, 0.02) 0%, rgba(200, 150, 101, 0.03) 100%);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .nav-side { display: none; }
+    .nav-logo { text-align: left; }
+    .mobile-burger { display: block; }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .image-wrapper {
+        transform: none;
+        height: 50vh;
+        border-radius: 20px;
+    }
+    
+    .floating-stamp {
+        display: none;
+    }
+    
+    .terroir-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .terroir-images {
+        height: 400px;
+    }
+}

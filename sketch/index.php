@@ -46,9 +46,9 @@ $sec = $config['sections'] ?? [];
                 <span class="side-menu-title">Evennements</span>
                 <div class="submenu-content">
                     <div class="submenu-content-inner">
-                        <a href="#galas" onclick="toggleMenu()">Galas & Réceptions</a>
-                        <a href="#corporate" onclick="toggleMenu()">Corporate</a>
-                        <a href="#prive" onclick="toggleMenu()">Événements Privés</a>
+                        <a href="#galas" onclick="toggleMenu()">Anniversaires</a>
+                        <a href="#corporate" onclick="toggleMenu()">Brunchs</a>
+                        <a href="#prive" onclick="toggleMenu()">Chef à domicile</a>
                     </div>
                 </div>
             </div>

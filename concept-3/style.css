@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap');
+
+:root {
+    /* Thème Bleu Canard & Beige */
+    --color-emerald: #0A3C46; /* Bleu canard profond et chaleureux */
+    --color-sand: #F4EFEB; /* Beige très clair et doux */
+    --color-gold: #D8B28A; /* Beige doré / Sable chaud (accent) */
+    --color-white: #FFFFFF;
+    
+    /* Typographie */
+    --font-serif: 'Cormorant Garamond', serif; /* Élégance classique */
+    --font-sans: 'Manrope', sans-serif; /* Propre, géométrique, moderne */
+    
+    /* Effets Verre */
+    --glass-bg: rgba(244, 239, 235, 0.05);
+    --glass-border: rgba(244, 239, 235, 0.15);
+    
+    --transition-slow: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-emerald);
+    color: var(--color-sand);
+    overflow-x: hidden;
+}
+
+/* --- NAVIGATION GLASSMORPHISM --- */
+.glass-nav {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    height: 70px;
+    background: rgba(10, 60, 70, 0.62);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(216, 178, 138, 0.18);
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-sand);
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-sand);
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-gold);
+}
+
+.btn-outline {
+    text-decoration: none;
+    color: var(--color-sand);
+    border: 1px solid rgba(244, 239, 235, 0.8);
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+}
+
+.btn-outline:hover {
+    background: var(--color-gold);
+    color: var(--color-emerald);
+}
+
+.mobile-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- HERO CINÉMATIQUE --- */
+.hero-cinematic {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6) saturate(1.2);
+}
+
+.bg-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(10, 60, 70, 0.18) 0%, rgba(10, 60, 70, 0.82) 100%);
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 2rem;
+    transform: translateY(-20px);
+}
+
+.eyebrow {
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--color-gold);
+    margin-bottom: 2rem;
+}
+
+.hero-content h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(4rem, 8vw, 7rem);
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.italic-serif {
+    font-style: italic;
+    color: var(--color-sand);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-weight: 300;
+    max-width: 500px;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+/* --- INDICATEUR DE SCROLL --- */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--color-sand);
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+}
+
+.scroll-text {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--color-gold), transparent);
+}
+
+/* --- SECTION BENTO GRID --- */
+.bento-section {
+    padding: 8rem 5%;
+    background-color: var(--color-emerald);
+}
+
+.section-header {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--color-gold);
+    font-weight: 300;
+}
+
+/* Grille CSS ultra moderne */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 400px;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bento-card {
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dark-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(216, 178, 138, 0.14);
+}
+
+.light-card {
+    background: linear-gradient(145deg, #f5efeb 0%, #e2d5c3 100%);
+    color: var(--color-emerald);
+}
+
+.image-card {
+    padding: 0;
+    grid-column: span 1;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.image-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-tag {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+.text-card h3 {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.text-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .nav-links, .btn-outline {
+        display: none;
+    }
+    
+    .mobile-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .mobile-toggle span {
+        width: 25px;
+        height: 2px;
+        background: var(--color-sand);
+    }
+    
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+    
+    .bento-card {
+        min-height: 350px;
+    }
+    
+    .image-card {
+        height: 350px;
+    }
+}

@@ -3,19 +3,16 @@
 :root {
     /* --- PALETTE AZUR & CRÉOLE LUXE --- */
     --ocean-deep: #0A2342;
-    /* Bleu Océan profond (fond marin et élégance) */
     --sky-blue: #6F9CEB;
-    /* Bleu Ciel lumineux mais doux (les alizés) */
     --sky-light: #EBF2FA;
-    /* Bleu ciel très clair (fond pur) */
     --gold-amber: #DDA15E;
-    /* Or chaud ambré (le soleil couchant, l'exotisme chaud) */
     --bg-sand: #FAF6F0;
-    /* Blanc Écume de Coco / Sable chaud clair */
     --bg-caldera: #E1E9F5;
-    /* Bleu horizon délavé doux pour les alternances */
     --text-muted: #526073;
-    /* Couleur de texte secondaire lisible et marine */
+
+    /* --- CONFIGURATION GLOBALE DYNAMIQUE TRADUITE --- */
+    --font-body-size: 16px;
+    --base-line-height: 1.7;
 
     /* --- TYPOGRAPHIE & COUPE LUXE --- */
     --font-display: 'Syne', sans-serif;
@@ -33,10 +30,11 @@
 
 body {
     font-family: var(--font-body);
+    font-size: var(--font-body-size);
+    line-height: var(--base-line-height);
     background-color: var(--bg-sand);
     color: var(--ocean-deep);
     overflow-x: hidden;
-    line-height: 1.7;
 }
 
 /* --- TYPOGRAPHIE --- */
@@ -63,28 +61,21 @@ section {
 }
 
 /* --- LE VÉRITABLE TISSU MADRAS TRADITIONNEL EN CSS --- */
-/* Combinaison précise de quadrillages Jaune d'or, Rouge vif, Bleu Océan et lignes Blanches */
 .madras-fabric {
     background-color: #F4B41A;
-    /* Base jaune Madras iconique */
     background-image:
         linear-gradient(90deg, rgba(186, 24, 27, 0.8) 12px, transparent 12px),
-        /* Bandes Rouges */
         linear-gradient(rgba(186, 24, 27, 0.8) 12px, transparent 12px),
         linear-gradient(90deg, rgba(10, 35, 66, 0.7) 6px, transparent 6px),
-        /* Bandes Bleu Océan */
         linear-gradient(rgba(10, 35, 66, 0.7) 6px, transparent 6px),
         linear-gradient(90deg, #FFF 2px, transparent 2px),
-        /* Lignes Blanches fines */
         linear-gradient(#FFF 2px, transparent 2px);
     background-size: 55px 55px;
     background-position: center;
     border: 2px solid rgba(255, 255, 255, 0.4);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    /* Pour garantir la lisibilité du texte sur le madras */
 }
 
-/* Petit liseré de séparation Madras élégant sous les titres */
 .madras-line-accent {
     height: 6px;
     width: 80px;
@@ -369,18 +360,6 @@ nav.scrolled {
     font-family: var(--font-body);
 }
 
-@media (max-width: 768px) {
-    .side-menu {
-        width: 100%;
-        padding: 120px 40px 40px;
-    }
-
-    .side-menu-links>a,
-    .side-menu-title {
-        font-size: 1.8rem;
-    }
-}
-
 /* --- HERO SECTION --- */
 .hero {
     position: relative;
@@ -389,7 +368,7 @@ nav.scrolled {
     align-items: center;
     padding: 0 8%;
     background: linear-gradient(to right, rgba(10, 35, 66, 0.95) 30%, rgba(111, 156, 235, 0.3) 100%),
-        url('https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+        url('hero-bg-creole-sharp.png') center/cover !important;
 }
 
 .hero-content {
@@ -398,24 +377,29 @@ nav.scrolled {
 
 .hero-content h1 {
     font-size: 5rem;
-    color: var(--bg-sand);
+    color: #FAF6F0;
+    /* title_color */
     line-height: 0.95;
     margin-bottom: 30px;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
+    /* text_size */
     color: rgba(251, 249, 245, 0.9);
+    /* text_color */
     margin-bottom: 45px;
     max-width: 600px;
-    font-weight: 300;
+    font-weight: 500;
+    font-style: italic;
 }
 
-/* Bouton CTA */
 .btn-devis {
     display: inline-block;
-    background: var(--sky-blue);
-    color: var(--ocean-deep);
+    background: #6F9CEB;
+    /* btn_bg */
+    color: #0A2342;
+    /* btn_text */
     padding: 20px 45px;
     border-radius: 50px;
     text-decoration: none;
@@ -448,12 +432,12 @@ nav.scrolled {
 .badge-exotique {
     color: #FFF;
     padding: 15px 35px;
-    border-radius: 50px;
+    border-radius: 8px 30px;
     font-family: var(--font-display);
     font-size: 1.1rem;
     text-transform: uppercase;
     font-weight: 700;
-    background-image: linear-gradient(rgba(10, 35, 66, 0.4), rgba(10, 35, 66, 0.5)), url('madrass-tissu.jpg');
+    background-image: linear-gradient(rgba(10, 35, 66, 0.2), rgba(10, 35, 66, 0.1)), url('madrass-tissu.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -484,18 +468,21 @@ nav.scrolled {
     }
 }
 
-/* --- SECTION 1 : MANIFESTE DE MER --- */
+/* --- SECTION 1 : MANIFESTE --- */
 .manifesto {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: center;
-    background: var(--bg-caldera);
+    background: #E1E9F5;
+    /* bg_color */
 }
 
 .manifesto-text h2 {
     font-size: 3.5rem;
-    color: var(--ocean-deep);
+    /* title_size */
+    color: #0A2342;
+    /* title_color */
     line-height: 1;
     margin-bottom: 30px;
     margin-top: 15px;
@@ -503,15 +490,28 @@ nav.scrolled {
 
 .manifesto-text p {
     font-size: 1.1rem;
-    color: var(--ocean-deep);
+    /* text_size */
+    color: #0A2342;
+    /* text_color */
     margin-bottom: 20px;
     font-weight: 400;
     opacity: 0.9;
 }
 
+.manifesto-image-container {
+    position: relative;
+}
+
+.manifesto-image-container img {
+    width: 100%;
+    border-radius: var(--organic-radius);
+    box-shadow: 0 20px 50px rgba(10, 35, 66, 0.15);
+}
+
 /* --- SECTION 2 : PRESTATIONS --- */
 .services-section {
-    background: var(--bg-sand);
+    background: #FAF6F0;
+    /* bg_color */
 }
 
 .section-intro {
@@ -521,7 +521,16 @@ nav.scrolled {
 
 .section-intro h2 {
     font-size: 4rem;
-    color: var(--ocean-deep);
+    /* title_size */
+    color: #0A2342;
+    /* title_color */
+}
+
+.section-subtitle {
+    max-width: 600px;
+    margin: 20px auto 0 auto;
+    color: #526073;
+    /* subtitle_color */
 }
 
 .services-grid {
@@ -531,7 +540,8 @@ nav.scrolled {
 }
 
 .service-luxury-card {
-    background: #fff;
+    background: #FFFFFF;
+    /* card_bg */
     border-radius: var(--organic-radius);
     padding: 50px 40px;
     border: 1px solid rgba(10, 35, 66, 0.05);
@@ -544,48 +554,59 @@ nav.scrolled {
 }
 
 .card-featured {
-    border: 2px solid var(--sky-blue);
+    border: 2px solid #6F9CEB;
+    /* featured_border_color */
 }
 
 .card-meta {
     font-family: var(--font-body);
     font-weight: 600;
-    color: var(--sky-blue);
+    color: #6F9CEB;
     font-size: 0.85rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
 
+.card-meta-featured {
+    color: var(--gold-amber);
+}
+
 .service-luxury-card h3 {
     font-size: 2rem;
-    color: var(--ocean-deep);
+    color: #0A2342;
+    /* card_title_color */
     margin-bottom: 20px;
 }
 
 .service-luxury-card p {
-    color: var(--text-muted);
+    color: #526073;
+    /* card_text_color */
     font-size: 1rem;
     margin-bottom: 30px;
 }
 
 .card-price {
     font-family: var(--font-display);
-    color: var(--ocean-deep);
+    color: #0A2342;
+    /* card_title_color */
     font-size: 1.3rem;
     border-top: 1px dashed #D0D7E1;
     padding-top: 20px;
 }
 
-/* --- SECTION 3 : GALERIE DE L'ACADÉMIE --- */
+/* --- SECTION 3 : GALERIE --- */
 .gallery-stories {
-    background: var(--ocean-deep);
+    background: #0A2342;
+    /* bg_color */
     color: var(--bg-sand);
 }
 
 .gallery-stories h2 {
     font-size: 4rem;
-    color: var(--gold-amber);
+    /* main_title_size */
+    color: #DDA15E;
+    /* main_title_color */
     text-align: center;
     margin-bottom: 80px;
 }
@@ -598,6 +619,7 @@ nav.scrolled {
 
 .story-card {
     background: rgba(255, 255, 255, 0.02);
+    /* card_bg */
     border-radius: var(--organic-radius);
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -615,20 +637,22 @@ nav.scrolled {
 
 .story-details h4 {
     font-size: 1.8rem;
-    color: var(--bg-sand);
+    color: #FAF6F0;
+    /* card_title_color */
     margin-bottom: 15px;
 }
 
 .story-details p {
     color: rgba(251, 249, 245, 0.75);
+    /* card_text_color */
     font-size: 1rem;
     font-weight: 300;
 }
 
 /* --- SECTION 4 : TEMOIGNAGES --- */
 .reviews-section {
-    background: var(--sky-blue);
-    color: var(--ocean-deep);
+    background: #6F9CEB;
+    /* bg_color */
     text-align: center;
 }
 
@@ -641,6 +665,9 @@ nav.scrolled {
     font-family: var(--font-serif);
     font-style: italic;
     font-size: 2.2rem;
+    /* text_size */
+    color: #0A2342;
+    /* text_color */
     line-height: 1.4;
     margin-bottom: 30px;
 }
@@ -650,19 +677,41 @@ nav.scrolled {
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 2px;
-    color: var(--bg-sand);
+    color: #FAF6F0;
+    /* author_color */
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* --- SECTION 5 : LAB DE DEVIS --- */
+.devis-section {
+    background: #FAF6F0;
+    /* bg_color */
+}
+
 .devis-box {
     background: #071526;
+    /* box_bg */
     color: var(--bg-sand);
     border-radius: var(--organic-radius);
     padding: 80px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+}
+
+.devis-info h2 {
+    color: #6F9CEB;
+    /* title_color */
+    font-size: 3rem;
+    /* title_size */
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.devis-info p {
+    color: rgba(251, 249, 245, 0.8);
+    /* text_color */
+    font-weight: 300;
 }
 
 .devis-form input,
@@ -685,6 +734,29 @@ nav.scrolled {
     background: rgba(255, 255, 255, 0.07);
 }
 
+.btn-devis-submit {
+    display: inline-block;
+    background: #6F9CEB;
+    color: #0A2342;
+    padding: 20px 45px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-devis-submit:hover {
+    background: var(--ocean-deep);
+    color: var(--bg-sand);
+    transform: translateY(-5px);
+}
+
 /* --- RESPONSIVE --- */
 @media (max-width: 1100px) {
 
@@ -705,5 +777,17 @@ nav.scrolled {
 
     section {
         padding: 80px 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .side-menu {
+        width: 100%;
+        padding: 120px 40px 40px;
+    }
+
+    .side-menu-links>a,
+    .side-menu-title {
+        font-size: 1.8rem;
     }
 }

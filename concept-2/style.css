@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Syncopate:wght@700&display=swap');
+
+:root {
+    /* Couleurs Modernes - Thème Bleu Chaud & Épices */
+    --bg-dark: #14243d; /* Bleu nuit chaud, discret */
+    --bg-light: #f3ebde; /* Sable clair plus subtil */
+    --accent-spice: #c79b5b; /* Doré adouci */
+    --text-primary: #0B1B3D; /* Reprise du bleu sombre pour le texte principal */
+    --text-muted: #6a6270; /* Taupe froid-chaud plus discret */
+    
+    /* Typographie */
+    --font-extended: 'Syncopate', sans-serif;
+    --font-geo: 'Outfit', sans-serif;
+    
+    --transition-smooth: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-geo);
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+/* --- HERO SECTION SPLIT --- */
+.hero-modern {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    min-height: 100vh;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.hero-text-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4rem;
+}
+
+.brand-tag {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brand-tag::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background-color: var(--accent-spice);
+}
+
+.title-wrapper h1 {
+    font-family: var(--font-extended);
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 1.1;
+    color: var(--text-primary);
+    text-transform: uppercase;
+}
+
+.title-wrapper .text-accent {
+    color: var(--bg-light); /* Rend le texte invisible à part le contour */
+    -webkit-text-stroke: 1px var(--text-primary);
+    color: transparent;
+}
+
+.hero-description {
+    margin-top: 2.5rem;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    max-width: 500px;
+    font-weight: 300;
+}
+
+.cta-group {
+    margin-top: 4rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.btn-primary {
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+    padding: 1.2rem 2.5rem;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: var(--transition-smooth);
+    border: 1px solid var(--bg-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-spice);
+    border-color: var(--accent-spice);
+    color: #faf7f2;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.25);
+}
+
+.btn-secondary {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition-smooth);
+}
+
+.btn-secondary:hover {
+    color: var(--accent-spice);
+}
+
+/* --- HERO IMAGE SIDE --- */
+.hero-image-side {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: calc(100vh - 4rem);
+}
+
+.hero-image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9) contrast(1.1); /* Légèrement assombri pour le côté premium */
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Overlay bleu très subtil pour lier l'image au reste du site */
+    background: linear-gradient(to top, rgba(11, 27, 61, 0.5) 0%, transparent 40%);
+}
+
+.floating-stat {
+    position: absolute;
+    bottom: 4rem;
+    left: 2rem;
+    background: rgba(22, 38, 63, 0.45); /* Fond bleuté chaud transparent */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(248, 241, 230, 0.2);
+    padding: 1.5rem;
+    border-radius: 16px;
+    color: #f8f1e6;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.stat-number {
+    font-family: var(--font-extended);
+    font-size: 1.5rem;
+    color: var(--accent-spice);
+}
+
+.stat-text {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* --- SECTION INTRO (SCROLL) --- */
+.intro-section {
+    padding: 8rem 2rem;
+    background-color: var(--bg-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.intro-container {
+    max-width: 900px;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-family: var(--font-extended);
+    font-size: 0.85rem;
+    color: var(--accent-spice);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 2.5rem;
+}
+
+.intro-container h2 {
+    font-family: var(--font-extended);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    color: var(--bg-dark);
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+}
+
+.text-accent-alt {
+    font-family: var(--font-geo);
+    font-style: italic;
+    text-transform: none;
+    font-weight: 300;
+    color: var(--text-muted);
+}
+
+.intro-container p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+/* --- NAVIGATION FLOTTANTE --- */
+.floating-nav {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(22, 38, 63, 0.9); /* Bleu nuit chaud */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 0.8rem 1rem 0.8rem 2rem;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    z-index: 1000;
+    border: 1px solid rgba(248, 241, 230, 0.08);
+    box-shadow: 0 20px 40px rgba(11, 27, 61, 0.3);
+}
+
+.nav-brand {
+    font-family: var(--font-geo);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #f8f1e6;
+    font-size: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: rgba(248, 241, 230, 0.75);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: var(--transition-smooth);
+}
+
+.nav-links a:hover {
+    color: #f8f1e6;
+}
+
+.menu-trigger {
+    background: #f7efe3;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    font-family: var(--font-geo);
+    font-weight: 500;
+    color: var(--bg-dark);
+    transition: var(--transition-smooth);
+}
+
+.menu-trigger:hover {
+    background: var(--accent-spice);
+    color: #f8f1e6;
+}
+
+.menu-dots {
+    display: flex;
+    gap: 4px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background: var(--bg-dark);
+    border-radius: 50%;
+    transition: var(--transition-smooth);
+}
+
+.menu-trigger:hover .dot {
+    background: #f8f1e6;
+}
+
+/* --- FULLSCREEN MENU OVERLAY --- */
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-dark);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-smooth);
+    transform: translateY(20px);
+}
+
+.fullscreen-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.menu-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.menu-label {
+    font-family: var(--font-geo);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-spice);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.menu-col a {
+    color: #f8f1e6;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: 300;
+    transition: var(--transition-smooth);
+    opacity: 0.7;
+}
+
+.menu-col a:hover {
+    opacity: 1;
+    transform: translateX(10px);
+    color: var(--accent-spice);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .hero-modern {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .hero-text-side {
+        padding: 4rem 2rem;
+        order: 2;
+    }
+
+    .hero-image-side {
+        height: 60vh;
+        order: 1;
+    }
+    
+    .desktop-only {
+        display: none;
+    }
+
+    .menu-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .menu-col a {
+        font-size: 2rem;
+    }
+    
+    .intro-section {
+        padding: 4rem 2rem;
+    }
+}

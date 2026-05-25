@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Minute Créole | L'Épure Tropicale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="fullscreen-menu" id="fullMenu">
+        <div class="menu-content">
+            <div class="menu-col">
+                <span class="menu-label">Découvrir</span>
+                <a href="#">Nos Prestations</a>
+                <a href="#">L'album Photos</a>
+            </div>
+            <div class="menu-col">
+                <span class="menu-label">Événements</span>
+                <a href="#">Mariages & Célébrations</a>
+                <a href="#">Galas & Réceptions</a>
+                <a href="#">Anniversaires</a>
+            </div>
+            <div class="menu-col">
+                <span class="menu-label">Échanger</span>
+                <a href="#">Concevoir son évennement</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="hero-modern">
+        <div class="hero-text-side">
+            <div class="brand-tag">La Minute Créole — Depuis XXXX</div>
+
+            <div class="title-wrapper">
+                <h1>Saveurs créoles</h1>
+                <h1 class="text-accent">Sublimées.</h1>
+            </div>
+
+            <p class="hero-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.
+            </p>
+
+            <div class="cta-group">
+                <a href="#devis" class="btn-primary">Concevoir votre évennement</a>
+                <a href="#galerie" class="btn-secondary">Voir le menu<span>↓</span></a>
+            </div>
+        </div>
+
+        <div class="hero-image-side">
+            <img src="hero-bg-creole.png"
+                alt="Assiette creole haut de gamme avec produits de la mer et epices tropicales">
+            <div class="image-overlay"></div>
+
+            <div class="floating-stat">
+                <span class="stat-number">4.9/5</span>
+                <span class="stat-text">Excellence reconnue</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="concept" class="intro-section">
+        <div class="intro-container">
+            <span class="section-subtitle">Notre Vision</span>
+            <h2>Sublimer l'héritage, <br><span class="text-accent-alt">réinventer la tradition.</span></h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.
+            </p>
+        </div>
+    </section>
+
+    <nav class="floating-nav">
+        <div class="nav-brand">La Minute Créole.</div>
+        <div class="nav-links desktop-only">
+            <a href="#concept">Concept</a>
+            <a href="#prestations">Prestations</a>
+        </div>
+        <button class="menu-trigger" onclick="toggleMenu()">
+            <span class="menu-text">Menu</span>
+            <div class="menu-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </button>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('fullMenu');
+            const body = document.body;
+            menu.classList.toggle('active');
+
+            // Empêcher le scroll quand le menu est ouvert
+            if (menu.classList.contains('active')) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = 'auto';
+            }
+        }
+    </script>
+</body>
+
+</html>
