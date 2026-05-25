@@ -2,8 +2,8 @@
 
 :root {
     /* Thème Bleu Canard, Beige & Or Lumineux */
-    --color-emerald: #032B33; /* Bleu canard très profond et luxueux */
-    --color-sand: #F5F2EB; /* Beige clair raffiné */
+    --color-emerald: #069494; /* Bleu canard vibrant et moderne */
+    --color-sand: #FCFAF5; /* Beige ivoire très clair et pur */
     --color-gold: #DCAE51; /* Or lumineux et chaleureux */
     --color-white: #FFFFFF;
     
@@ -12,8 +12,8 @@
     --font-sans: 'Manrope', sans-serif; /* Propre, géométrique, moderne */
     
     /* Effets Verre */
-    --glass-bg: rgba(245, 242, 235, 0.06);
-    --glass-border: rgba(245, 242, 235, 0.18);
+    --glass-bg: rgba(252, 250, 245, 0.06);
+    --glass-border: rgba(252, 250, 245, 0.18);
     
     --transition-slow: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -40,7 +40,7 @@ body {
     width: 90%;
     max-width: 1200px;
     height: 70px;
-    background: rgba(3, 43, 51, 0.72);
+    background: rgba(6, 148, 148, 0.75);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(220, 174, 81, 0.35);
@@ -82,7 +82,7 @@ body {
 .btn-outline {
     text-decoration: none;
     color: var(--color-sand);
-    border: 1px solid rgba(245, 242, 235, 0.8);
+    border: 1px solid rgba(252, 250, 245, 0.8);
     padding: 0.6rem 1.5rem;
     border-radius: 50px;
     font-size: 0.85rem;
@@ -135,7 +135,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at center, rgba(3, 43, 51, 0.25) 0%, rgba(3, 43, 51, 0.9) 100%);
+    background: radial-gradient(circle at center, rgba(6, 148, 148, 0.25) 0%, rgba(6, 148, 148, 0.9) 100%);
 }
 
 .hero-content {
@@ -255,7 +255,7 @@ body {
 }
 
 .light-card {
-    background: linear-gradient(145deg, #F5F2EB 0%, #DFD3C3 100%);
+    background: linear-gradient(145deg, #FCFAF5 0%, #EFEBE0 100%);
     color: var(--color-emerald);
 }
 
